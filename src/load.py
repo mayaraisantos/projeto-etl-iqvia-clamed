@@ -12,3 +12,5 @@ def load_data(df):
         index=False
     )
 
+    print("Carga concluída com sucesso no PostgreSQL")
+
