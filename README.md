@@ -131,5 +131,28 @@ Os dados tratados são carregados em um banco PostgreSQL utilizando SQLAlchemy.
 ## Como executar o projeto
 1. Instalar dependências: pip install pandas sqlalchemy psycopg2
 2. Executar o pipeline: python src/main.py
+## Detalhamento das Transformações
+
+Durante a etapa de transformação dos dados foram realizadas as seguintes ações:
+
+- Padronização dos nomes das colunas para o formato snake_case
+- Conversão de tipos de dados
+- Tratamento de valores nulos
+- Remoção de registros duplicados
+- Criação de colunas derivadas:
+  - Mês/Ano da venda
+  - Participação percentual da Clamed
+- Junção dos dados de vendas com a tabela de filiais
+
+## Evidência de Execução do ETL
+
+O pipeline foi estruturado de forma modular, dividido em:
+- extract.py (Extração)
+- transform.py (Transformação)
+- load.py (Carga)
+- main.py (Orquestração)
+
+Durante a execução do pipeline, mensagens de log são exibidas no console indicando o sucesso de cada etapa do processo ETL.
+
 
 
