@@ -111,3 +111,25 @@ transform.py
 load.py
 
 Executar o notebook analise_validacao.ipynb para validação dos dados
+
+## Processo ETL
+
+### Extract
+Os dados são extraídos a partir de arquivos Excel fornecidos pela IQVIA.
+
+### Transform
+Nesta etapa são realizados:
+- Padronização dos nomes das colunas
+- Tratamento de valores nulos
+- Remoção de registros duplicados
+- Criação de colunas derivadas
+- Junção entre tabelas
+
+### Load
+Os dados tratados são carregados em um banco PostgreSQL utilizando SQLAlchemy.
+
+## Como executar o projeto
+1. Instalar dependências: pip install pandas sqlalchemy psycopg2
+2. Executar o pipeline: python src/main.py
+
+
